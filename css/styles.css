@@ -1,0 +1,551 @@
+body {
+  color: #333;
+    margin: 0;
+    font-family: "Noto Sans Japanese", sans-serif;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    transition: all .3s;
+}
+
+/* --------ヘッダ--ー------ */
+body {
+  margin-top: 140px;/* position:fixedした要素は高さを失うので下の要素までの高さをボディ要素に当てることで高さを保つ*/
+}
+
+#pageHead {
+  width: 100%;
+  margin-bottom: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  z-index: 1000;/* 最前面に固定するため*/
+}
+
+
+/* ヘッダーロゴ */
+#pageHead .pageHeadLogo {
+  padding-left: 55px;
+  margin-top: 15px;
+}
+
+#pageHead:after {
+  content: "";
+  clear: both;
+  display: block;
+  /* position: fixed; */
+}
+
+.pageHeadLogo {
+  float: left;
+}
+
+/* ヘッダーメニュー */
+.pageHeadMenu {
+  float: right;
+}
+
+.pageHeadMenu ul {
+  margin: 0;
+}
+
+.pageHeadMenu ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.pageHeadMenu ul li {
+  float: left;
+  list-style: none;
+}
+
+.pageHeadMenu ul li.toggleNav {
+  margin-left: 26px;
+}
+/* --------パンくずリスト & 企業イメージ画像------- */
+/* パンくずリスト */
+.breadNav {
+    max-width: 1000px;
+    margin-left: 140px;
+}
+.topicPath {
+  /* width: 1000px; */
+  /* margin: 0 551.500px 25px; */
+}
+
+.topicPath a {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #999999;
+}
+
+/* イメージ画像とタイトル */
+.mainVisual {
+position: relative;
+margin-bottom: 30px;
+}
+
+.mainVisualText {
+position: absolute;
+top: 40px;
+left: 0;
+right: 0;
+bottom: 0;
+margin: 0 auto; /*中央そろえ*/
+color: #FFF;
+/* background-color: rgba(0,0,0,.4); */
+width: 1000px;
+height: 99px;
+}
+
+.MainVisual .mainVisualText p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+}
+
+.MainVisual .mainVisualText h1 {
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 10px;
+}
+
+/* --------メインページ--ー------ */
+#page {
+  width: 1000px;
+  margin: 0 auto 60px;
+}
+
+/* SNSリンク集 */
+.snsLinks {
+  width: 800px;
+  height: 34px;
+  margin: 0 auto 40px;
+}
+
+/* SNSリンク */
+.snsLinks .container {
+  display: flex;
+  justify-content: flex-end; /*右揃え*/
+}
+
+.snsLinks .container li {
+  list-style: none;
+  margin:0 10px;
+  color: #333333;
+  font-size: 10px;
+  line-height: 34px;
+  font-weight: 400;
+  font-family: Arial;
+}
+
+.snsLinks .container li img {
+  vertical-align: middle;
+}
+
+.snsLinks .container li:first-child {
+  margin-left: 0;
+}
+.snsLinks .container li:last-child {
+  margin-right: 0;
+}
+
+/* メインコンテンツ1 */
+.mainContents {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.mainContent1 .mainHead {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.mainContent1 .mainHead:before {
+position: relative;
+top: 2.5px;
+margin: 0 10px 0 0;
+content: url('../img/mainHead_h2.png');
+}
+
+.mainContent1 .mainHeadText {
+  color: #333333;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.mainContent1 .mainHeadText2 {
+  margin-top: 16px;
+}
+.mainContent1 .mainHeadText3 {
+  margin-top: 16px;
+  height: 30px;
+}
+
+.mainContent1 .mainHeadImg {
+  margin: 50px auto 20px;
+}
+
+.mainContent1 .mainHeadPdf {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.mainContent1 .mainHeadPdf img {
+  margin: 0;
+	padding: 0;
+	vertical-align: bottom;
+}
+
+/* メインコンテンツ2 */
+.mainContent2 .mainHead:before {
+position: relative;
+top: 2.5px;
+margin: 0 10px 0 0;
+content: url('../img/mainHead_h2.png');
+}
+
+.mainContent2 .fxb-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 820px;
+}
+
+/* .mainContent2 .fxb-container .fxb-row {
+} */
+
+.mainContent2 .fxb-container .fxb-item {
+  width: 185px;
+  padding: 0 5px;
+  margin-bottom: 30px;
+}
+
+.mainContent2 .fxbVisualText p {
+  background-color: #005bac;
+  font-size: 10px;
+  line-height: 22px; heightと揃えることで上下の中央揃え
+  font-weight: 400;
+  color: #FFF;
+  width: 185px;
+  height: 22px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.mainContent2 .fxbVisual img {
+   vertical-align: bottom;
+}
+
+.mainContent2 ._content {
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.mainContent2 ._content p {
+  margin: 10px 0 0;
+}
+
+.mainContent2 .fxb-sub-container {
+  padding-left: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size:0;
+}
+
+.mainContent2 .fxb-sub-container .fxb-tag {
+  list-style: none;
+  display: inline-block;
+  background: #FFF;
+  border-radius: 10px;
+  border: solid 1px #ccc;
+  padding: 6px 9px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.mainContent2 .fxb-sub-container .fxb-tag a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 12px;
+  line-height: 17px;
+
+}
+.fxb-item time {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #666666;
+}
+
+/* ページスライダー */
+.pageSlider {
+  width: 800px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.pageSlider:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pageSlider .leftSlider {
+  float: left;
+}
+
+.pageSlider .rightSlider {
+  float: right;
+}
+
+/* ストロングポイント */
+.strongPoint {
+  margin-top: 40px;
+  width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #deecf8;
+}
+
+.strongPoint h3 {
+  margin: 0;
+}
+
+.strongPoint .fxb-container-top, .strongPoint .fxb-container-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* フレックスボックス上段 */
+.strongPoint .fxb-container-top .fxb-item-top {
+  border: solid 1px #ccc;
+  background: #FFF;
+  width: 239px;
+  height: 70px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.strongPoint .fxb-container-top .fxb-item-top:first-child {
+  margin-left: 0;
+}
+
+.strongPoint .fxb-container-top .fxb-item-top a {
+  display: block;
+  font-size: 16px;
+  line-height: 70px;
+  color: #0c419a;
+  /* vertical-align: middle; */ /*行の中のみ有効*/
+}
+
+.strongPoint .fxb-container-bottom .fxb-item-bottom {
+  border: solid 1px #ccc;
+  background: #FFF;
+  width: 239px;
+  height: 51px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.strongPoint .fxb-container-bottom .fxb-item-bottom:first-child {
+  margin-left: 0;
+}
+
+.strongPoint .fxb-container-bottom .fxb-item-bottom a {
+  display: block;
+  font-size: 16px;
+  line-height: 51px;
+  color: #0c419a;
+  /* vertical-align: middle; */ /*行の中のみ有効*/
+}
+
+/* ローカルナビ */
+.localNav {
+  width: 1000px;
+  margin:120px auto 0;
+  border-top: 2px solid #333;
+}
+
+.localNav p {
+  font-size: 20px;
+  line-height: 38px;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+  padding: 18px 0 30px;
+}
+
+.localNavBox {
+  border-top: 1px dotted #999;
+  border-bottom: 1px dotted #999;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.localNavBox h3 {
+  font-size: 16px;
+  line-height: 30px;
+  color: #333;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.localNavBox .localNavConteiner {
+  display: flex;
+  padding: 0;
+}
+
+.localNavBox ul {
+  margin-top: 20px;
+}
+
+.localNavBox ul:last-child {
+  margin-bottom: 0;
+}
+
+.localNavBox .localNavConteiner li {
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #0c419a;
+  width: 235px;
+}
+
+.localNavBox .localNavConteiner li small {
+  color: #333;
+}
+
+.localNav .localNavFoot {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #0c419a;
+  margin-top: 52px;
+}
+
+/* SNSリンクfooter */
+
+.snsLinksFooter ul {
+  padding-left: 0;
+}
+
+.snsLinksFooter .container {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #999;
+}
+
+.snsLinksFooter .container li {
+  list-style: none;
+  margin:0 0 0 40px;
+  color: #005bac;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: Helvetica;
+}
+
+.snsLinksFooter .container li img {
+  vertical-align: middle;
+}
+
+.snsLinksFooter .container li:first-child {
+  margin-left: 0;
+}
+
+/*サイト内Link集*/
+.footerLinkBox {
+  width: 1000px;
+  margin: 40px auto 70px;
+}
+
+.footerLinkBox .footerLinkContainer-top, .footerLinkBox .footerLinkContainer-middle, .footerLinkBox .footerLinkContainer-bottom {
+  display: flex;
+}
+
+.footerLinkBox ul.footerLink-item {
+  padding-left: 0;
+  margin-bottom:0;
+}
+
+.footerLinkBox ul li {
+  width: 255px;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 21px;
+  color: #666666;
+  margin: 13px 0 16px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.footerLinkBox ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footerLinkBox ul .footerLink-item-head {
+  margin: 0 10px;
+  padding: 12px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #666666;
+  box-sizing: border-box;
+}
+
+.infoNav {
+  width: 1000px;
+  margin: 70px auto 15px;
+}
+
+.infoNav ul {
+  padding-left: 0;
+}
+
+.infoNav ul li {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  color: #999999;
+  width: auto;
+  padding: 0;
+  margin: 0 12px 5px 0;
+}
+
+  .infoNav li:not(:first-child)::before {
+    content: "|";
+    margin-right: 12px;
+}
+
+.footerCopyright {
+  font-size: 10px;
+  line-height: 19px;
+  color: #333333;
+}
